@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q1 - Employee Full Details</title>
+</head>
+<body>
+
+<h1>Q1 - Employee Full Details</h1>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+struct employee {
+    int id;
+    char name[20];
+    char design[25];
+};
+
+int main() {
+    struct employee emp[50];
+    printf("Enter details of 50 employees:\\n");
+    for(int i=0; i&lt;50; i++){
+        printf("\\nEmployee %d:\\n", i+1);
+        printf("Enter ID: "); scanf("%d", &emp[i].id);
+        printf("Enter Name: "); scanf("%s", emp[i].name);
+        printf("Enter Designation: "); scanf("%s", emp[i].design);
+    }
+    printf("\\n| %-5s | %-25s | %-20s |\\n", "ID", "Name", "Designation");
+    for(int i=0; i&lt;50; i++){
+        printf("| %-5d | %-25s | %-20s |\\n", emp[i].id, emp[i].name, emp[i].design);
+    }
+    return 0;
+}
+</pre>
+
+<a href="structures.html" class="button">Back to Structures</a>
+
+</body>
+</html>
